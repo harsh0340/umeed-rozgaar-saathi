@@ -10,6 +10,7 @@ import {
   Calculator,
   Monitor,
   TrendingUp,
+  Lock,
 } from "lucide-react";
 
 const jobCategories = [
@@ -43,10 +44,21 @@ const Home = () => {
                 <p className="text-xs text-muted-foreground">रोज़गार सबके लिए</p>
               </div>
             </div>
-            <Button onClick={() => navigate("/register")} size="lg">
-              <span className="font-semibold">लॉगिन / रजिस्टर</span>
-              <span className="ml-1 text-xs">Login / Register</span>
-            </Button>
+            <div className="flex items-center gap-2">
+              <Button 
+                onClick={() => navigate("/admin/login")} 
+                variant="ghost" 
+                size="sm"
+                className="text-muted-foreground hover:text-foreground"
+              >
+                <Lock className="w-4 h-4 mr-1" />
+                <span className="text-xs">Admin</span>
+              </Button>
+              <Button onClick={() => navigate("/register")} size="lg">
+                <span className="font-semibold">लॉगिन / रजिस्टर</span>
+                <span className="ml-1 text-xs">Login / Register</span>
+              </Button>
+            </div>
           </div>
         </div>
       </header>
