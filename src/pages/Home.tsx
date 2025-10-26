@@ -54,7 +54,7 @@ const Home = () => {
                 <Lock className="w-4 h-4 mr-1" />
                 <span className="text-xs">Admin</span>
               </Button>
-              <Button onClick={() => navigate("/register")} size="lg">
+              <Button onClick={() => navigate("/auth")} size="lg">
                 <span className="font-semibold">लॉगिन / रजिस्टर</span>
                 <span className="ml-1 text-xs">Login / Register</span>
               </Button>
